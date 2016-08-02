@@ -1,4 +1,4 @@
-package app.bundles.test;
+package marvin.demo.app.bundles.test;
 
 import com.marvin.component.kernel.bundle.Bundle;
 

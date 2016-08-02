@@ -1,11 +1,14 @@
-package app.bundles.test.controller;
+package marvin.demo.app.bundles.test.controller;
 
-//import com.marvin.old.routing.mapping.Route;
+import com.marvin.component.container.awareness.ContainerAware;
+import com.marvin.component.kernel.Kernel;
 
-public class TestController {
+public class TestController extends ContainerAware {
 
 //    @Route(name = "test.charger", path = "/test/charger")//, reponse="ressources/view/nav.view.twig"
-    public void charger() {
+    public void test() {
+        Kernel kernel = this.get("kernel", Kernel.class);
+        System.out.println(kernel);
         System.out.println("test.charger");
     }
 }

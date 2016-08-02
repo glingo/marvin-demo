@@ -1,8 +1,8 @@
 package marvin.demo;
 
-import app.AppKernel;
 import com.marvin.bundle.framework.console.Console;
 import com.marvin.component.kernel.Kernel;
+import marvin.demo.app.AppKernel;
 
 /**
  *
@@ -12,7 +12,7 @@ public class MyTest {
 
     public MyTest() {
         
-        Kernel kernel = new AppKernel();
+        Kernel kernel = new AppKernel(true);
         
         Console console = new Console(kernel);
         console.start();

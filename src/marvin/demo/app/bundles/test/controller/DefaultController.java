@@ -1,4 +1,4 @@
-package app.bundles.test.controller;
+package marvin.demo.app.bundles.test.controller;
 
 //import com.marvin.old.routing.mapping.Route;
 
