@@ -3,5 +3,6 @@
 <routing>
     
     <import resource="bundles/test/resources/conf/routing.xml" />
+    <import resource="bundles/nn/resources/conf/routing.xml" />
     
 </routing>

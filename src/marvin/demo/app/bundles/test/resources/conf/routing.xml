@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    <route controleur="com.marvin.bundles.menu.controller.DefaultControleur" type="annotation" />
+    <route name="demo.homepage" path="/" controller="marvin.demo.app.bundles.test.controller.DefaultController::charger" />
+    <route name="demo.container.use" path="/container" controller="marvin.demo.app.bundles.test.controller.TestController::test" />
 </routing>

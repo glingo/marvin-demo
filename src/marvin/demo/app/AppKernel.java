@@ -8,7 +8,7 @@ package marvin.demo.app;
 import com.marvin.bundle.framework.FrameWorkBundle;
 import com.marvin.component.kernel.Kernel;
 import com.marvin.component.kernel.bundle.Bundle;
-import com.nn.NeuralNetworkBundle;
+import marvin.demo.app.bundles.nn.NeuralNetworkBundle;
 import marvin.demo.app.bundles.test.TestBundle;
 
 /**
