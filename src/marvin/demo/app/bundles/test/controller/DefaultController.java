@@ -4,7 +4,7 @@ package marvin.demo.app.bundles.test.controller;
 
 import com.marvin.component.container.awareness.ContainerAware;
 import com.marvin.component.templating.Engine;
-import com.marvin.component.templating.Template;
+import com.marvin.component.templating.template.Template;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +18,10 @@ public class DefaultController extends ContainerAware {
     public void charger() {
         try {
 //            writer.println("default.charger");
+            
+            
+            
+            
             
             Map<String, Object> context = new HashMap<>();
             context.put("name", "Mitchell");
