@@ -1,6 +1,5 @@
 package marvin.demo;
 
-import com.marvin.bundle.framework.console.Console;
 import com.marvin.bundle.framework.server.Server;
 import com.marvin.component.kernel.Kernel;
 import marvin.demo.app.AppKernel;

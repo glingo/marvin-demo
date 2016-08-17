@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package marvin.demo.app;
 
-import com.marvin.bundle.framework.FrameWorkBundle;
+import com.marvin.bundle.debug.DebugBundle;
+import com.marvin.bundle.framework.FrameworkBundle;
 import com.marvin.component.kernel.Kernel;
 import com.marvin.component.kernel.bundle.Bundle;
 import marvin.demo.app.bundles.nn.NeuralNetworkBundle;
@@ -24,7 +20,8 @@ public class AppKernel extends Kernel {
     @Override
     protected Bundle[] registerBundles() {
         return new Bundle[]{
-            new FrameWorkBundle(),
+            new DebugBundle(),
+            new FrameworkBundle(),
             new TestBundle(),
             new NeuralNetworkBundle()
         };

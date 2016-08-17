@@ -2,6 +2,9 @@
 
 <routing>
     
+    <!-- Import debug routes -->
+    <import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />
+    
     <import resource="bundles/test/resources/conf/routing.xml" />
     <import resource="bundles/nn/resources/conf/routing.xml" />
     
