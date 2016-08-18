@@ -4,11 +4,6 @@ import com.marvin.bundle.framework.console.Console;
 import com.marvin.component.kernel.Kernel;
 import marvin.demo.app.AppKernel;
 
-
-/**
- *
- * @author Dr.Who
- */
 public class RunConsole {
     
     public static void main(String[] args) throws Exception {
