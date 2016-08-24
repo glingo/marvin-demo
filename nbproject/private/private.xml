@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/RunJavaFX.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/controller/PersonController.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/controller/WelcomeController.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/AdressbookBundle.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/resources/routing.xml</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/controller/WelcomeController.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/model/Person.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/resources/view/person/create.fxml.view</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/resources/view/welcome.fxml.view</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/resources/conf/routing.xml</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/RunConsole.java</file>
+            <file>file:/C:/Users/cdi305/Desktop/GitHub/marvin-demo/src/marvin/demo/app/bundles/adressbook/repository/PersonRepository.java</file>
+        </group>
     </open-files>
 </project-private>
