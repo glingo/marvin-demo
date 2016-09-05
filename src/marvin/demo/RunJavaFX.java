@@ -1,6 +1,6 @@
 package marvin.demo;
 
-import com.marvin.bundle.framework.javafx.JavaFXApplication;
+import com.marvin.bundle.javafx.JavaFXApplication;
 import com.marvin.component.kernel.Kernel;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -23,6 +23,6 @@ public class RunJavaFX extends Application {
     public void start(Stage stage) throws Exception {
         Kernel kernel = new AppKernel(true);
         JavaFXApplication app = new JavaFXApplication(kernel);
-        app.display(stage, "test");
+//        app.display(stage, "test");
     }
 }

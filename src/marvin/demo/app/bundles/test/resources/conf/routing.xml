@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    <route name="demo.homepage" path="/" controller="marvin.demo.app.bundles.test.controller.DefaultController::charger" />
-    <route name="demo.container.use" path="/container" controller="marvin.demo.app.bundles.test.controller.TestController::test" />
+    <route name="demo.homepage" path="/">
+        <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::charger</default>
+    </route>
+    
+    <route name="demo.container.use" path="/container">
+        <default key="_controller">marvin.demo.app.bundles.test.controller.TestController::test</default>
+    </route>
+    
+    
+    <route name="demo.1" path="/demo/1">
+        <default key="_controller">Test:Test:test</default>
+    </route>
+    
+    
+    <route name="hello" path="/hello/{name}">
+        <default key="_controller">Test:Default:hello</default>
+        <default key="name">World</default>
+        <!--<requirement key="name">\\W</requirement>-->
+        <requirement key="name">\\w+</requirement>
+    </route>
 </routing>
