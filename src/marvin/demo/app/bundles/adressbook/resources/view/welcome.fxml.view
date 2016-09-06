@@ -1,0 +1,63 @@
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<?import marvin.demo.app.bundles.adressbook.model.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml">
+
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding> 
+
+    <Label style="-fx-font: NORMAL 20 Tahoma;" text="Address Book" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+
+    <Button text="Create a person" fx:id="person_create_lol" onAction="#request"/>
+
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Last Name" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Email Address" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <sortOrder>
+             <fx:reference source="firstNameColumn"/>
+        </sortOrder> 
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+
+                <!--
+                <Person firstName="Jacob" lastName="Smith" email="jacob.smith@example.com"/>
+                <Person firstName="Isabella" lastName="Johnson" email="isabella.johnson@example.com"/>
+                <Person firstName="Ethan" lastName="Williams" email="ethan.williams@example.com"/>
+                <Person firstName="Emma" lastName="Jones" email="emma.jones@example.com"/>
+                <Person firstName="Michael" lastName="Brown" email="michael.brown@example.com"/>
+                -->
+
+                {% for person in persons %}
+                    <Person firstName="{{ person.firstName }}" 
+                            lastName="{{ person.lastName }}" 
+                            email="{{ person.email }}"/>
+                {% endfor %}
+
+            </FXCollections>
+        </items>
+    </TableView>
+</GridPane>

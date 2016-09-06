@@ -1,0 +1,13 @@
+{% extends "./base.html.view" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block content %}
+    <h1> Marvin </h1> 
+
+    <section>
+        version : {{ kernel.VERSION }}
+    </section>
+{% endblock %}

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
+<<<<<<< HEAD
     <route name="demo.homepage" path="/">
         <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::charger</default>
     </route>
@@ -21,4 +22,8 @@
         <!--<requirement key="name">\\W</requirement>-->
         <requirement key="name">\\w+</requirement>
     </route>
+=======
+    <!--<route name="demo.homepage" path="/" controller="marvin.demo.app.bundles.test.controller.DefaultController::charger" />-->
+    <route name="demo.container.use" path="/container" controller="marvin.demo.app.bundles.test.controller.TestController::test" />
+>>>>>>> origin/master
 </routing>

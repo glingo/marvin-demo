@@ -2,9 +2,14 @@
 
 <routing>
     
+    <route name="welcome_text" path="/" controller="marvin.demo.app.controller.WelcomeController::welcomeTEXTAction" />
+    <route name="welcome_html" path="/html" controller="marvin.demo.app.controller.WelcomeController::welcomeHTMLAction" />
+    <route name="welcome_fxml" path="/fxml" controller="marvin.demo.app.controller.WelcomeController::welcomeFXMLAction" />
+    
     <!-- Import debug routes -->
     <import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />
     
+    <import resource="bundles/adressbook/resources/conf/routing.xml" />
     <import resource="bundles/test/resources/conf/routing.xml" />
     <import resource="bundles/nn/resources/conf/routing.xml" />
     
