@@ -24,13 +24,11 @@ public class RunJavaFX extends Application {
     public void start(Stage stage) throws Exception {
         Kernel kernel = new AppKernel(true);
         JavaFXApplication app = new JavaFXApplication(kernel);
-<<<<<<< HEAD
-=======
+
 //        Parent parent = app.request("/fxml");
         app.request("/adressbook", stage);
         stage.setTitle("Hello World!");
         stage.show();
->>>>>>> origin/master
 //        app.display(stage, "test");
     }
 }
