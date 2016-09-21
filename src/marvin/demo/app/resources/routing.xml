@@ -2,15 +2,31 @@
 
 <routing>
     
-    <route name="welcome_text" path="/" controller="marvin.demo.app.controller.WelcomeController::welcomeTEXTAction" />
-    <route name="welcome_html" path="/html" controller="marvin.demo.app.controller.WelcomeController::welcomeHTMLAction" />
-    <route name="welcome_fxml" path="/fxml" controller="marvin.demo.app.controller.WelcomeController::welcomeFXMLAction" />
-    
     <!-- Import debug routes -->
     <import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />
     
     <import resource="bundles/adressbook/resources/conf/routing.xml" />
     <import resource="bundles/test/resources/conf/routing.xml" />
     <import resource="bundles/nn/resources/conf/routing.xml" />
+    
+    <route name="welcome_text" path="/">
+        <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeAction</default>
+        <default key="_format">html</default>
+        <requirement key="_format">html|text|fxml</requirement>
+    </route>
+    
+<!--    <route name="welcome_text" path="/">
+        <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeTEXTAction</default>
+        <default key="_format">html</default>
+        <requirement key="_format">[html|text|fxml]+</requirement>
+    </route>
+    
+    <route name="welcome_html" path="/html">
+        <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeHTMLAction</default>
+    </route>
+    
+    <route name="welcome_fxml" path="/fxml">
+        <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeFXMLAction</default>
+    </route>-->
     
 </routing>

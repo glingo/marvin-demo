@@ -1,11 +1,8 @@
 package marvin.demo;
 
-import com.marvin.bundle.framework.javafx.JavaFXApplication;
+import com.marvin.bundle.javafx.JavaFXApplication;
 import com.marvin.component.kernel.Kernel;
 import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import marvin.demo.app.AppKernel;
 

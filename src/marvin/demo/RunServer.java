@@ -1,7 +1,7 @@
 package marvin.demo;
 
-import com.marvin.bundle.framework.server.Server;
 import com.marvin.component.kernel.Kernel;
+import com.marvin.component.server.Server;
 import marvin.demo.app.AppKernel;
 
 public class RunServer {

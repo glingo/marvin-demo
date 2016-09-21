@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    <!--<route name="demo.homepage" path="/" controller="marvin.demo.app.bundles.test.controller.DefaultController::charger" />-->
-    <route name="demo.container.use" path="/container" controller="marvin.demo.app.bundles.test.controller.TestController::test" />
+    <route name="demo.container.use" path="/hello/{arg0}">
+        <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::hello</default>
+        <default key="arg0">Michelle</default>
+        <requirement key="arg0">\\w+</requirement>
+    </route>
 </routing>
