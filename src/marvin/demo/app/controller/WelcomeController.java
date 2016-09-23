@@ -1,14 +1,9 @@
 package marvin.demo.app.controller;
 
 import com.marvin.bundle.framework.controller.Controller;
-import com.marvin.component.dialog.Response;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * @author cdi305
- */
 public class WelcomeController extends Controller {
 
     public void welcomeAction(String type) {
@@ -28,7 +23,7 @@ public class WelcomeController extends Controller {
     }
 
     @Override
-    protected Response render(String name, Map context, String suffix) {
+    protected Object render(String name, Map context, String suffix) {
         context.put("kernel", get("kernel"));
         name = "marvin/demo/app/resources/view/" + name;
         return super.render(name, context, suffix);

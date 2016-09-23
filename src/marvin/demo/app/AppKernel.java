@@ -7,10 +7,6 @@ import com.marvin.component.kernel.bundle.Bundle;
 import marvin.demo.app.bundles.nn.NeuralNetworkBundle;
 import marvin.demo.app.bundles.test.TestBundle;
 
-/**
- *
- * @author Dr.Who
- */
 public class AppKernel extends Kernel {
 
     public AppKernel(boolean debug) {
@@ -25,6 +21,12 @@ public class AppKernel extends Kernel {
             new TestBundle(),
             new NeuralNetworkBundle()
         };
+    }
+    
+    public static void main(String[] args) {
+        Kernel kernel = new AppKernel(true);
+        
+        kernel.boot();
     }
     
 }

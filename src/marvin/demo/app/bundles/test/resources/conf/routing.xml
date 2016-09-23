@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    <route name="demo.container.use" path="/hello/{arg0}">
+    <route name="demo.container.use" path="/demo/hello/{arg0}">
         <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::hello</default>
         <default key="arg0">Michelle</default>
         <requirement key="arg0">\\w+</requirement>
