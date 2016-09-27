@@ -6,5 +6,6 @@ public class DefaultController extends ContainerAware {
 
     public void hello() {
         System.out.println("default.charger");
+        
     }
 }

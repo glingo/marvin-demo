@@ -2,8 +2,10 @@ package marvin.demo.app;
 
 import com.marvin.bundle.debug.DebugBundle;
 import com.marvin.bundle.framework.FrameworkBundle;
+import com.marvin.bundle.web.WebBundle;
 import com.marvin.component.kernel.Kernel;
 import com.marvin.component.kernel.bundle.Bundle;
+import com.marvin.bundle.swing.SwingBundle;
 import marvin.demo.app.bundles.nn.NeuralNetworkBundle;
 import marvin.demo.app.bundles.test.TestBundle;
 
@@ -18,6 +20,10 @@ public class AppKernel extends Kernel {
         return new Bundle[]{
             new DebugBundle(),
             new FrameworkBundle(),
+            
+            new SwingBundle(),
+            new WebBundle(),
+            
             new TestBundle(),
             new NeuralNetworkBundle()
         };
