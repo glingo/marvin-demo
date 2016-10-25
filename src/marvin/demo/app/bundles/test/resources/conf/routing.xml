@@ -2,7 +2,7 @@
 
 <routing>
 
-    <route name="demo.container.use" path="/demo/hello/{arg0}">
+    <route name="demo.container.use" path="/marvin/demo/hello/{arg0}">
         <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::hello</default>
         <default key="arg0">Michelle</default>
         <requirement key="arg0">\\w+</requirement>
@@ -12,7 +12,7 @@
         <default key="_controller">marvin.demo.app.bundles.test.controller.DefaultController::charger</default>
     </route>
     
-    <route name="demo.container.use" path="/container">
+    <route name="demo.container.use" path="/marvin/container">
         <default key="_controller">marvin.demo.app.bundles.test.controller.TestController::test</default>
     </route>
     
@@ -22,11 +22,11 @@
     </route>
     
     
-    <route name="hello" path="/hello/{name}">
+    <route name="hello" path="/marvin/hello/{arg0}">
         <default key="_controller">Test:Default:hello</default>
-        <default key="name">World</default>
+        <default key="arg0">World</default>
         <!--<requirement key="name">\\W</requirement>-->
-        <requirement key="name">\\w+</requirement>
+        <requirement key="arg0">\\w+</requirement>
     </route>
     
     <!--<route name="demo.homepage" path="/" controller="marvin.demo.app.bundles.test.controller.DefaultController::charger" />-->

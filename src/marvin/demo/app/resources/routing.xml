@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    
+
     <!-- Import debug routes -->
-    <import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />
+    <!--<import resource="/com/marvin/bundle/debug/resources/config/routing.xml" />-->
     
-    <import resource="bundles/adressbook/resources/conf/routing.xml" />
-    <import resource="bundles/test/resources/conf/routing.xml" />
-    <import resource="bundles/nn/resources/conf/routing.xml" />
+    <!--<import resource="bundles/test/resources/conf/routing.xml" />-->
+    <!--<import resource="bundles/adressbook/resources/conf/routing.xml" />-->
+    <!--<import resource="bundles/nn/resources/conf/routing.xml" prefix="/marvin" />-->
     
-    <route name="welcome_text" path="/">
+    <route name="welcome_text" path="/marvin/hello.{type}">
         <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeAction</default>
-        <default key="_format">html</default>
-        <requirement key="_format">html|text|fxml</requirement>
+        <default key="type">html</default>
+        <requirement key="type">html|text|fxml</requirement>
     </route>
-    
+
 <!--    <route name="welcome_text" path="/">
         <default key="_controller">marvin.demo.app.controller.WelcomeController::welcomeTEXTAction</default>
         <default key="_format">html</default>

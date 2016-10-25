@@ -1,0 +1,13 @@
+<html>
+
+    <body>
+
+        {% block title %}
+            Default 
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+    </body>
+
+</html>

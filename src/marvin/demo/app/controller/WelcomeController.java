@@ -6,20 +6,20 @@ import java.util.Map;
 
 public class WelcomeController extends Controller {
 
-    public void welcomeAction(String type) {
-        this.render("welcome", new HashMap<>(), type);
+    public Object welcomeAction(String type) {
+        return this.render("welcome", new HashMap<>(), type);
     }
 
-    public void welcomeHTMLAction() {
-        this.render("welcome", new HashMap<>(), "html");
+    public Object welcomeHTMLAction() {
+        return this.render("welcome", new HashMap<>(), "html");
     }
 
-    public void welcomeTEXTAction() {
-        this.render("welcome", new HashMap<>(), "txt");
+    public Object welcomeTEXTAction() {
+        return this.render("welcome", new HashMap<>(), "txt");
     }
 
-    public void welcomeFXMLAction() {
-        this.render("welcome", new HashMap<>(), "fxml");
+    public Object welcomeFXMLAction() {
+        return this.render("welcome", new HashMap<>(), "fxml");
     }
 
     @Override
