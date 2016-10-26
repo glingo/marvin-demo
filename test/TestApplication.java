@@ -1,10 +1,10 @@
 import com.marvin.component.kernel.Kernel;
-import javax.swing.Action;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import marvin.demo.app.AppKernel;
+
 import com.marvin.bundle.swing.ApplicationAction;
 import com.marvin.bundle.swing.MarvinSwingApplication;
 
