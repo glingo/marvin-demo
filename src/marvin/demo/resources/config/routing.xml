@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routing>
+
+    <!-- Default controller routes -->
+    
+    <route name="demo.index" path="/">
+        <default key="_controller">Demo:Demo:index</default>
+        <!--<default key="_controller">Default:index</default>-->
+    </route>
+    
+    <route name="demo.model" path="/model">
+        <default key="_controller">Demo:Demo:model</default>
+    </route>
+    
+    <route name="demo.modelmap" path="/modelmap">
+        <default key="_controller">marvin.demo.controller.DemoController::modelMap</default>
+    </route>
+    
+    <route name="demo.modelandview" path="/modelandview">
+        <default key="_controller">marvin.demo.controller.DemoController::modelAndView</default>
+    </route>
+    
+    <route name="demo.view" path="/view">
+        <default key="_controller">marvin.demo.controller.DemoController::view</default>
+    </route>
+    
+    <!-- Erroneous controller routes -->
+    <route name="demo.error.void" path="/error/void">
+        <default key="_controller">marvin.demo.controller.ErroneousController::voidAction</default>
+    </route>
+
+</routing>
