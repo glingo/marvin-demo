@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<routing>
-    <route name="adressbook_homepage" path="/adressbook" controller="marvin.demo.app.bundles.adressbook.controller.WelcomeController::welcome" />
-    <route name="adressbook_person_create" path="/person/create" controller="marvin.demo.app.bundles.adressbook.controller.PersonController::createPersonAction" />
-
-</routing>
