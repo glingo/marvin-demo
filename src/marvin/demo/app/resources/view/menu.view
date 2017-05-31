@@ -1,0 +1,15 @@
+
+{% block menu %}
+------ MENU PRINCIPAL ------
+/                   -> Index
+/model              -> Controller that return a Model Object
+/view               -> Controller that return a View Object
+/modelAndView       -> Controller that return a ModelAndView Object
+
+    -- MENU TODO --
+
+    /todos
+    /todos/create
+
+----------------------------         
+{% endblock %}

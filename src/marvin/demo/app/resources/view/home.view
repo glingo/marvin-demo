@@ -1,0 +1,11 @@
+{% block title %}
+------ Index ------
+{% endblock %}
+
+{% block menu %}
+    {% include './menu.view' %}
+{% endblock %}
+
+{% block content %}
+-------------------
+{% endblock %}
