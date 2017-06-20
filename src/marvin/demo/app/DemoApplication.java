@@ -1,23 +1,37 @@
 package marvin.demo.app;
 
 import com.marvin.bundle.console.ConsoleApplication;
+import com.marvin.bundle.console.ConsoleBundle;
 import com.marvin.bundle.framework.Application;
-import com.marvin.component.kernel.Kernel;
+import com.marvin.bundle.framework.FrameworkBundle;
+import marvin.demo.bundle.todo.TodoBundle;
+import com.marvin.component.kernel.bundle.Bundle;
 import java.util.Arrays;
+import java.util.List;
+import marvin.demo.bundle.game.GameBundle;
 
 public class DemoApplication extends ConsoleApplication {
-    
-    protected static final String ENV_PARAMETER_PREFIX = "-env=";
 
-    protected DemoApplication(Kernel kernel) {
-        super(kernel);
+    public DemoApplication(String env, boolean debug) {
+        super(env, debug);
     }
     
     public static void main(String[] args) {
-        String env = Arrays.stream(args)
-                .filter(arg -> arg.startsWith(ENV_PARAMETER_PREFIX))
-                .findFirst().orElse("-env=dev")
-                .replace(ENV_PARAMETER_PREFIX, "");
-        Application.launch(DemoApplication.class, new AppKernel(env, true));
+        Application.launch(DemoApplication.class, args);
+    }
+
+    @Override
+    protected List<Bundle> registerBundles() {
+        return Arrays.asList(
+            // add framework bundle.
+            new FrameworkBundle(),
+//            new DebugBundle(),
+            new ConsoleBundle(),
+//            new ShellBundle(),
+//            new MenuBundle(),
+            
+            new TodoBundle(),
+            new GameBundle()
+        );
     }
 }

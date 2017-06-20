@@ -17,7 +17,7 @@ public class DefaultController extends Controller {
     
     public String index() {
         LOG.info("DefaultController::index");
-        return "home";
+        return "::home";
     }
     
     public Model model() {
@@ -29,13 +29,13 @@ public class DefaultController extends Controller {
     public Map modelMap() {
         LOG.info("DefaultController::modelMap");
         Map model = new HashMap<>();
-        model.put(ViewSubscriber.VIEW_PARAMETER, "home");
+        model.put(ViewSubscriber.VIEW_PARAMETER, "::home");
         return model;
     }
     
     public ModelAndView modelAndView() {
         LOG.info("DefaultController::modelAndView");
-        ModelAndView mav = new ModelAndView("home");
+        ModelAndView mav = new ModelAndView("::home");
         
         mav.setModel(new HashMap<>());
         
@@ -46,7 +46,7 @@ public class DefaultController extends Controller {
         LOG.info("DefaultController::view");
         ViewInterface view = new View("dummy") {
             @Override
-            public void render(Handler handler, HashMap model, Object request, Object response) {
+            public void render(Handler handler, Map model, Object request, Object response) {
                 LOG.info("View::render");
             }
 

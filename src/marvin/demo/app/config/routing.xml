@@ -20,5 +20,6 @@
     </route>
     
     <import resource="../../bundle/todo/resources/config/routing.xml" />
+    <import resource="../../bundle/game/resources/config/routing.xml" />
 
 </routing>

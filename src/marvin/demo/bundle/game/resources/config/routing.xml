@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routing>
+    
+    <route name="games.list" path="/games">
+        <default key="_controller">game_controller:list</default>
+    </route>
+    
+    <route name="games.create" path="/games/create/{arg0}/{arg1}">
+        <default key="_controller">game_controller:create</default>
+        <requirement key="arg0">\\w+</requirement>
+        <requirement key="arg1">\\w+</requirement>
+    </route>
+
+    <route name="games.form" path="/games/form">
+        <default key="_controller">game_controller:form</default>
+    </route>
+</routing>

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <container>
-    
-    <import resource="router.xml" />
-    <import resource="mvc.xml" />
+    <services>
+        <service id="task_repository" class="marvin.demo.bundle.todo.repository.TaskRepository" />
 
+        <service id="task_manager" class="marvin.demo.bundle.todo.business.TaskManager">
+            <argument type="service" ref="task_repository"/>
+        </service>
+
+        <service id="task_controller" class="marvin.demo.bundle.todo.controller.TaskController">
+            <argument type="service" ref="task_manager"/>
+        </service>
+    </services>
 </container>

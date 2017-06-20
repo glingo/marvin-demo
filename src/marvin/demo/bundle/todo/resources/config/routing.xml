@@ -3,11 +3,35 @@
 <routing>
     
     <route name="todos.list" path="/todos">
-        <default key="_controller">marvin.demo.bundle.todo.controller.TodoController::list</default>
+        <default key="_controller">task_controller:list</default>
+    </route>
+    
+    <route name="todos.create" path="/todos/create/{arg0}/{arg1}">
+        <default key="_controller">task_controller:create</default>
+        <requirement key="arg0">\\w+</requirement>
+        <requirement key="arg1">\\w+</requirement>
+    </route>
+
+    <route name="todos.form" path="/todos/form">
+        <default key="_controller">task_controller:form</default>
+    </route>
+    
+    <route name="todos.edit" path="/todos/edit/{arg0}">
+        <default key="_controller">task_controller:edit</default>
+        <requirement key="arg0">\\d+</requirement>
+    </route>
+    
+<!--    <route name="todos.create" path="/todos/create/{name}/{description}">
+        <default key="_controller">task_controller:create</default>
+        <requirement index=0 key="name">\\w+</requirement>
+        <requirement index=1 key="description">\\w+</requirement>
+    </route>-->
+
+<!--    <route name="todos.list" path="/todos">
+        <default key="_controller">Task:Task:list</default>
     </route>
     
     <route name="todos.create" path="/todos/create">
-        <default key="_controller">marvin.demo.bundle.todo.controller.TodoController::create</default>
-    </route>
-    
+        <default key="_controller">Task:Task:create</default>
+    </route>-->
 </routing>

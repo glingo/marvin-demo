@@ -1,12 +1,12 @@
-package marvin.demo.bundle.todo.model;
+package marvin.demo.bundle.game.model;
 
-public class Task {
+public class Game {
     
     private Long id;
     private String title;
     private String description;
 
-    public Task(String title, String description) {
+    public Game(String title, String description) {
         this.title = title;
         this.description = description;
     }

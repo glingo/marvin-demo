@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <services>
+        <service id="game_repository" class="marvin.demo.bundle.game.repository.GameRepository" />
+
+        <service id="game_manager" class="marvin.demo.bundle.game.business.GameManager">
+            <argument type="service" ref="game_repository"/>
+        </service>
+
+        <service id="game_controller" class="marvin.demo.bundle.game.controller.GameController">
+            <argument type="service" ref="game_manager"/>
+        </service>
+    </services>
+</container>
