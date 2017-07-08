@@ -6,7 +6,7 @@
             <resource>%kernel.root_dir%/config/routing.xml</resource>
         </router>
         <templating>
-            <!--<resource>%kernel.root_dir%/config/routing.xml</resource>-->
+            <engine>swing</engine>
         </templating>
     </framework>
     

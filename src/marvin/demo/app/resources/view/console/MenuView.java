@@ -1,4 +1,4 @@
-package marvin.demo.app.resources.view;
+package marvin.demo.app.resources.view.console;
 
 import com.marvin.bundle.console.command.Command;
 import com.marvin.bundle.console.mvc.view.ConsoleView;
