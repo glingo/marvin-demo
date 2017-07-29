@@ -6,14 +6,10 @@ import com.marvin.bundle.framework.Application;
 import com.marvin.bundle.framework.FrameworkBundle;
 import marvin.demo.bundle.todo.TodoBundle;
 import com.marvin.component.kernel.bundle.Bundle;
-import java.io.File;
-import java.nio.file.FileStore;
-import java.nio.file.FileSystems;
-import java.nio.file.PathMatcher;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import marvin.demo.bundle.game.GameBundle;
+import marvin.demo.bundle.zombie.ZombieBundle;
 
 public class DemoApplication extends ConsoleApplication {
 
@@ -22,17 +18,17 @@ public class DemoApplication extends ConsoleApplication {
     }
     
     public static void main(String[] args) {
-        System.out.println(File.separator);
-        System.out.println(FileSystems.getDefault().getSeparator());
-        
-        PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.*");
-        System.out.println(matcher.matches(Paths.get("a", "b")));
-        System.out.println(matcher.matches(Paths.get("a.a", "b")));
-        System.out.println(matcher.matches(Paths.get("a.a")));
+//        System.out.println(File.separator);
+//        System.out.println(FileSystems.getDefault().getSeparator());
+//        
+//        PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.*");
+//        System.out.println(matcher.matches(Paths.get("a", "b")));
+//        System.out.println(matcher.matches(Paths.get("a.a", "b")));
+//        System.out.println(matcher.matches(Paths.get("a.a")));
 
-        for (FileStore store: FileSystems.getDefault().getFileStores()) {
-            System.out.println(store);
-        }
+//        for (FileStore store: FileSystems.getDefault().getFileStores()) {
+//            System.out.println(store);
+//        }
 
         Application.launch(DemoApplication.class, args);
     }
@@ -48,7 +44,8 @@ public class DemoApplication extends ConsoleApplication {
 //            new MenuBundle(),
 
             new TodoBundle(),
-            new GameBundle()
+            new GameBundle(),
+            new ZombieBundle()
         );
     }
 }

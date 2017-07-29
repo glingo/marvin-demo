@@ -2,14 +2,18 @@
 
 <routing>
     
+    <route name="game" path="/game">
+        <default key="_controller">game_controller:game</default>
+    </route>
+    
     <route name="games.list" path="/games">
         <default key="_controller">game_controller:list</default>
     </route>
     
-    <route name="games.create" path="/games/create/{arg0}/{arg1}">
+    <route name="games.create" path="/games/create/{name}/{description}">
         <default key="_controller">game_controller:create</default>
-        <requirement key="arg0">\\w+</requirement>
-        <requirement key="arg1">\\w+</requirement>
+        <requirement key="name">\\w+</requirement>
+        <requirement key="description">\\w+</requirement>
     </route>
 
     <route name="games.form" path="/games/form">

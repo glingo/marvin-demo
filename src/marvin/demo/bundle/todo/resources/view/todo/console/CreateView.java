@@ -5,19 +5,26 @@ import com.marvin.bundle.console.mvc.view.ConsoleView;
 import com.marvin.bundle.framework.mvc.Handler;
 import com.marvin.component.mvc.model.Model;
 import java.io.OutputStream;
+import java.io.PrintStream;
+import java.io.Writer;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import marvin.demo.bundle.todo.model.Task;
+import org.jline.reader.LineReader;
+import org.jline.reader.LineReaderBuilder;
+import org.jline.terminal.Terminal;
 
 public class CreateView extends ConsoleView {
 
     public CreateView(String name) {
-        super(name, 50, 50);
+        super(name);
     }
     
     @Override
-    protected String getTitle(Handler<Command, OutputStream> handler, Model model, Command request, OutputStream response) throws Exception {
-        Optional<Task> current = model.get("task", Task.class);
+    protected String getTitle(Handler<Command, Terminal> handler, Model model, Command request, Terminal response) throws Exception {
+         Optional<Task> current = model.get("task", Task.class);
         
         if (!current.isPresent()) {
             return "Create a Task :";
@@ -27,23 +34,21 @@ public class CreateView extends ConsoleView {
     }
 
     @Override
-    protected String getBody(Handler<Command, OutputStream> handler, Model model, Command request, OutputStream response) throws Exception {
+    protected String getBody(Handler<Command, Terminal> handler, Model model, Command request, Terminal response) throws Exception {
         Optional<Task> current = model.get("task", Task.class);
-        spinner(response, 2000);
-        String title = input("title", response, System.in, String.class);
-        String description = input("description", response, System.in, String.class);
+        
+        LineReader reader = LineReaderBuilder.builder().terminal(response).build();
         
         if (!current.isPresent()) {
+            String title = reader.readLine("title");
+            String description = reader.readLine("description");
             
-        }
-        spinner(response, 2000);
-//        try {
             String command = "/todos/create/".concat(title).concat("/").concat(description);
+//            String command = "/todos/create/".concat("hello").concat("/").concat("world");
             handler.handle(new Command(command), response, false);
-//        } catch(Exception exception) {
-//            return "Création échouée";
-//        }
-        spinner(response, 2000);
+//            spinner(writer, 0, 2000);
+        }
+        
         return "Création réussi";
     }
 }

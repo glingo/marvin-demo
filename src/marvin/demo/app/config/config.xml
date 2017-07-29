@@ -6,7 +6,8 @@
             <resource>%kernel.root_dir%/config/routing.xml</resource>
         </router>
         <templating>
-            <engine>swing</engine>
+            <!--<engine>swing</engine>-->
+            <engine>console</engine>
         </templating>
     </framework>
     

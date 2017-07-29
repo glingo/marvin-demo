@@ -6,10 +6,10 @@
         <default key="_controller">task_controller:list</default>
     </route>
     
-    <route name="todos.create" path="/todos/create/{arg0}/{arg1}">
+    <route name="todos.create" path="/todos/create/{name}/{description}">
         <default key="_controller">task_controller:create</default>
-        <requirement key="arg0">\\w+</requirement>
-        <requirement key="arg1">\\w+</requirement>
+        <requirement key="name">\\w+</requirement>
+        <requirement key="description">\\w+</requirement>
     </route>
 
     <route name="todos.form" path="/todos/form">

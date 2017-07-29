@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container>
+    <services>
+        <service id="zombie_controller" class="marvin.demo.bundle.zombie.controller.ZombieController">
+        </service>
+    </services>
+</container>

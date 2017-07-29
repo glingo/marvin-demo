@@ -12,6 +12,12 @@ public class GameController {
         this.manager = manager;
     }
     
+    public ModelAndView game() {
+        return ModelAndView.builder().view("Game:game:game")
+                .model("game-title", "test game")
+                .build();
+    }
+    
     public ModelAndView list() {
         return ModelAndView.builder().view("Game:game:list")
                 .model("games", this.manager.findAll())
