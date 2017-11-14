@@ -40,8 +40,8 @@ public class CreateView extends ConsoleView {
         LineReader reader = LineReaderBuilder.builder().terminal(response).build();
         
         if (!current.isPresent()) {
-            String title = reader.readLine("title");
-            String description = reader.readLine("description");
+            String title = reader.readLine("title: ");
+            String description = reader.readLine("description: ");
             
             String command = "/todos/create/".concat(title).concat("/").concat(description);
 //            String command = "/todos/create/".concat("hello").concat("/").concat("world");

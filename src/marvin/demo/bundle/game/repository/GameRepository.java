@@ -21,7 +21,6 @@ public class GameRepository {
     }
     
     public Game save(Game task) {
-        
         if (Objects.isNull(task.getId())) {
             task.setId(Integer.toUnsignedLong(this.games.size()));
         }

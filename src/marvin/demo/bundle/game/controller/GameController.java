@@ -1,8 +1,14 @@
 package marvin.demo.bundle.game.controller;
 
 import com.marvin.component.mvc.ModelAndView;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import marvin.demo.bundle.game.business.GameManager;
 import marvin.demo.bundle.game.model.Game;
+import marvin.demo.bundle.game.resources.view.game.swing.GameView;
+import org.jline.utils.InfoCmp;
 
 public class GameController {
     
@@ -12,9 +18,16 @@ public class GameController {
         this.manager = manager;
     }
     
-    public ModelAndView game() {
+    public String run(String id) {
+        Game game = this.manager.findById(Long.valueOf(id));
+        this.manager.run(game);
+        return "Game:game:list";
+    }
+    
+    public ModelAndView show(String id) {
+        Game game = this.manager.findById(Long.valueOf(id));
         return ModelAndView.builder().view("Game:game:game")
-                .model("game-title", "test game")
+                .model("game", game)
                 .build();
     }
     

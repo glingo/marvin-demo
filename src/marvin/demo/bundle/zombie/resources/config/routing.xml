@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <routing>
-    <route name="zombie.index" path="/zombie">
+    <route name="zombie.index" path="/">
         <default key="_controller">zombie_controller:index</default>
     </route>
 </routing>

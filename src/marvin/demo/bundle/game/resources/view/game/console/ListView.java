@@ -32,7 +32,7 @@ public class ListView extends ConsoleView  {
         
         if (games.isPresent() && !games.get().isEmpty()) {
             body = games.get().stream().map((task) -> {
-                return "* ".concat(task.getTitle()).concat(" : ").concat(task.getDescription());
+                return "* ".concat(task.getId().toString()).concat(" ").concat(task.getTitle()).concat(" : ").concat(task.getDescription());
             }).collect(Collectors.joining("|\n|")).concat("|\n");
         }
         

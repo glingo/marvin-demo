@@ -18,18 +18,6 @@ public class DemoApplication extends ConsoleApplication {
     }
     
     public static void main(String[] args) {
-//        System.out.println(File.separator);
-//        System.out.println(FileSystems.getDefault().getSeparator());
-//        
-//        PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.*");
-//        System.out.println(matcher.matches(Paths.get("a", "b")));
-//        System.out.println(matcher.matches(Paths.get("a.a", "b")));
-//        System.out.println(matcher.matches(Paths.get("a.a")));
-
-//        for (FileStore store: FileSystems.getDefault().getFileStores()) {
-//            System.out.println(store);
-//        }
-
         Application.launch(DemoApplication.class, args);
     }
 

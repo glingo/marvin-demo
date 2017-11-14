@@ -6,21 +6,27 @@
     <route name="default.index" path="/">
         <default key="_controller">marvin.demo.app.controller.DefaultController::index</default>
     </route>
-    <route name="default.model" path="/model">
-        <default key="_controller">marvin.demo.app.controller.DefaultController::model</default>
-    </route>
-    <route name="default.model_map" path="/model/map">
-        <default key="_controller">marvin.demo.app.controller.DefaultController::modelMap</default>
-    </route>
-    <route name="default.model_and_view" path="/modelAndView">
-        <default key="_controller">marvin.demo.app.controller.DefaultController::modelAndView</default>
-    </route>
-    <route name="default.view" path="/view">
-        <default key="_controller">marvin.demo.app.controller.DefaultController::view</default>
-    </route>
     
-    <import resource="../../bundle/todo/resources/config/routing.xml" />
-    <import resource="../../bundle/game/resources/config/routing.xml" />
-    <import resource="../../bundle/zombie/resources/config/routing.xml" />
+    <routes prefix="/demo" >
+        <route name="default.model" path="/model">
+            <default key="_controller">marvin.demo.app.controller.DefaultController::model</default>
+        </route>
+        <route name="default.model_map" path="/model/map">
+            <default key="_controller">marvin.demo.app.controller.DefaultController::modelMap</default>
+        </route>
+        <route name="default.model_and_view" path="/modelAndView">
+            <default key="_controller">marvin.demo.app.controller.DefaultController::modelAndView</default>
+        </route>
+        <route name="default.view" path="/view">
+            <default key="_controller">marvin.demo.app.controller.DefaultController::view</default>
+        </route>
+    </routes>
+    
+<!--    <import resource="../../bundle/todo/resources/config/routing.xml" prefix="/todos"/>
+    <import resource="../../bundle/game/resources/config/routing.xml" prefix="/game"/>
+    <import resource="../../bundle/zombie/resources/config/routing.xml" prefix="/zombie"/>-->
+    <import resource="/marvin/demo/bundle/todo/resources/config/routing.xml" prefix="/todos"/>
+    <import resource="/marvin/demo/bundle/game/resources/config/routing.xml" prefix="/game"/>
+    <import resource="/marvin/demo/bundle/zombie/resources/config/routing.xml" prefix="/zombie"/>-->
 
 </routing>
